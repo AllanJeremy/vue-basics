@@ -1,6 +1,8 @@
 new Vue({
     el:'#app',
     data:{
+        link: 'https://www.allanjeremy.com',
+        someHtml: '<b>Some fancy</b> html<br/>',
         title:'Some title',
         description:'Some description about the thing whose name shall not be mentioned',
     },
