@@ -28,10 +28,14 @@ new Vue({
             this.x = evt.offsetX;
             this.y = evt.offsetY;
         },
-        movePlayer: function(evt)
+        postComment: function()
         {
-            alert(evt);
+            console.log('Posted comment!');
+        },
+        savePage: function()
+        {
+            alert('Saving file!');
         }
-    }
+    }   
     
 });
