@@ -11,11 +11,17 @@
 <body>
     <div id="app">
         <a v-bind:href="link"> Allan Jeremy </a>
-        <h1>Title : {{title}}</h1>
-        <p>{{description}}</p>
-        <h3>Message: {{ sayHi('John Snow') }}</h3>
 
-        <p v-html="someHtml"></p>
+        <div>
+            <button v-on:click="reverseText">Reverse all text</button>
+        </div>
+
+        <h1>{{title}}</h1>
+        <p>{{description}}</p>
+
+        <div class="canvas" @mousemove="updateCoordinates" @keydown.w="movePlayer">
+            <p>X: {{x}}, Y: {{y}}</p>
+        </div>
     </div>
     <script src="js/app.js"></script>
 </body>
