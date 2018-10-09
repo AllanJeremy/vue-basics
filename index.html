@@ -13,12 +13,13 @@
         <a v-bind:href="link"> Allan Jeremy </a>
 
         <div>
-            <button v-on:click="reverseText">Reverse all text</button>
+            <button v-on:click.once="reverseText">Reverse all text</button>
         </div>
 
         <h1>{{title}}</h1>
         <p>{{description}}</p>
 
+        <a href="#" v-on:click.prevent="reverseText">Reverse text</a>
         <div class="canvas" @mousemove="updateCoordinates" @keydown.w="movePlayer">
             <p>X: {{x}}, Y: {{y}}</p>
         </div>
