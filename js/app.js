@@ -4,6 +4,7 @@ new Vue({
         todoItem: '',
         link: 'https://www.allanjeremy.com',
         title:'Some title',
+        message: 'Hello from the normal app',
         description:'Some description about the thing whose name shall not be mentioned',
         x:0,
         y:0
@@ -36,6 +37,5 @@ new Vue({
         {
             alert('Saving file!');
         }
-    }   
-    
+    }    
 });
