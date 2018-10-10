@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello Vue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app" >
+        <button v-on:click="toggleError">Toggle error</button>
+        <button v-on:click="toggleSuccess">Toggle success</button>
+
+        <!-- Using v-show because this is less computing intensive -->
+        <h4 v-show="error" style="color:red;">Error message!</h4>
+        <h4 v-show="success" style="color:green;">Success message!</h4>
+        
+         <!-- Using v-if because this contains more data -->
+        <p v-if="error" style="color:red;">Error description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eum voluptates adipisci optio hic harum dolore exercitationem reiciendis maiores ipsam, minus sequi ratione rem voluptas. Soluta repudiandae quo facilis iste.</p>
+        <p v-else-if="success" style="color:green;">Success message/ Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eum voluptates adipisci optio hic harum dolore exercitationem reiciendis maiores ipsam, minus sequi ratione rem voluptas. Soluta repudiandae quo facilis iste.</p>
+    </div>
+    <script src="js/conditionals.js"></script>
+</body>
+</html>

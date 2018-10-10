@@ -23,12 +23,13 @@ button
     margin: 0;
     border-radius: 2px;
     border:0px;
-    color:white;
+    color:#212121;
     padding:0.5rem 2rem;
-    background-color:grey;
+    background-color:rgb(233, 233, 233);
 
 }
 button.valid
 {
+    color:white;
     background-color:rgb(94, 184, 94);
 }
