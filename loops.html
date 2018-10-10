@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello Vue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app" >
+        <h3 v-show="people.length>0">People</h3>
+        <ul v-if="people.length>0">
+            <li v-for="(person,index) in people">[{{index}}] {{person.name}} - {{person.age}}, {{person.occupation}} </li>
+        </ul>
+
+        <!-- Looping on a template -->
+        <template v-for="(person,index) in people">
+            <h1>{{person.name}}</h1>
+            <p>{{person.age}}, <b>{{person.occupation}}</b></p>
+        </template>
+        
+        <!-- Looping on an object -->
+        <div v-for="guy in people" style="margin:2rem auto;">
+            <div v-for="(val,key) in guy">
+                <b>{{key}}</b> : {{val}}
+            </div>
+        </div>
+
+    </div>
+    <script src="js/loops.js"></script>
+</body>
+</html>
