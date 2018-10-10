@@ -5,6 +5,7 @@ new Vue({
         message: '',
         currentTodo: '',
         todosExist: false,
+        isValidInput:false,
         todos: [],
     },
     methods:{
@@ -15,11 +16,23 @@ new Vue({
                 alert('Todo cannot be empty! Please enter a value');
                 return;
             }
+
             this.todos.push({
                 text: this.currentTodo
             });
             this.currentTodo = '';
             this.todosExist = (this.todos.length>0);
+            this.validateInput();
         },
+        validateInput: function(){
+            this.isValidInput = (this.currentTodo !== '');
+        }
+    },
+    computed:{
+        todoClasses: function(){
+            return {
+                valid: this.isValidInput
+            };
+        }
     }
 });

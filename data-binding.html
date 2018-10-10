@@ -11,8 +11,8 @@
 <body>
     <div id="app" >
         <div>
-            <input type="text" v-model="currentTodo" :value="currentTodo" v-on:keyup.enter="addTodo">
-            <button v-on:click="addTodo">Add todo</button>
+            <input type="text" v-model="currentTodo" v-on:keyup="validateInput" v-on:keyup.enter="addTodo" v-bind:class="todoClasses">
+            <button v-on:click="addTodo" v-bind:class="todoClasses">Add todo</button>
 
             <div>
                 <ul v-if="todosExist">
