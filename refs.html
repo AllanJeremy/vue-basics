@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello Vue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app" >
+            <div>
+                <input type="text" ref="inputText">
+                <button v-on:click="updateText">Update text</button>
+            </div>
+            <div>
+                <p ref="textDisplay"><b>Waiting for text value</b></p>
+            </div>
+    </div>
+    <script src="js/refs.js"></script>
+</body>
+</html>
