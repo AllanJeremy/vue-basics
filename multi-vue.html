@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello Vue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="main-app">
+        <div>
+            <h3>Main title: {{title}}</h3>
+            <p v-if="isSecondaryTitle">The main title and secondary title are the same</p>
+        </div>
+        <button v-on:click="changeTitle">Use secondary title</button>
+
+    </div>
+    <div id="secondary-app">
+        <div>
+            <h3>Secondary title: {{title}}</h3>
+            <p v-if="isPrimaryTitle">The secondary title and primary title are the same</p>
+        </div>
+        <button v-on:click="changeTitle">Use primary title</button>
+    </div>
+
+    <script src="js/multi-vue.js"></script>
+</body>
+
+</html>
